@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanes &/ Lines</title>
+    <link rel="stylesheet" href="">
+    <style></style>
+</head>
+<body>
+    <form action="/" method="post">
+        <label>What's The Line?: </label>
+        <input type="text" name="line" id="line" placeholder="Better be good👀..."><br>
+        <label>Who said it?: </label>
+        <input type="text" name="owner" id="owner" placeholder="Said by...">
+        <input type="submit" value="Add Line">
+    </form>
+    <section class="lines">
+        <p class="line">{{line.id}}. {{line.line}}</p>
+        <p class="teller"><em>{{line.teller}} </em></p>
+    </section>
+</body>
+</html>

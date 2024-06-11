@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanes &/ Lines</title>
+    <link rel="stylesheet" href="url for('static', filename='css/lanes.css')">
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'PT Sans', sans-serif;
+        }
+        body{
+            background-color: #e3e4e4;
+            margin:0;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            gap:3em;
+        }
+        .lines{
+            position: relative;
+            border-top:4px #222 solid;
+            border-bottom:4px #222 solid;
+            border-radius:8px;
+            padding:4px 1em;
+            width:60dvw;
+        } 
+        .teller{
+            color: #1e7bd2;
+        }
+        .form{
+            background-color: #222;
+            width:100dvw;
+            margin:0;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#e3e4e4;
+            font-weight: bold;
+            font-size:20px;
+            letter-spacing:1px;
+            padding:1em;
+            border-radius:8px;
+        }
+    </style>
+</head>
+<body style="font-family: 'PT Sans',sans-serif;">
+    <div class="form">
+        <form action="/" method="post">
+            <label>What's The Line?: </label>
+            <input type="text" name="line" id="line" placeholder="Better be good👀..."><br><br>
+            <label>Who said it?: </label>
+            <input type="text" name="owner" id="owner" placeholder="Said by...">
+            <input type="submit" value="Add Line">
+        </form>
+    </div>
+    {% for line in lines %}
+    <section class="lines">
+        <p class="line">{{line.id}}. {{line.line}}</p>
+        <p class="teller"><em>{{line.teller}} </em></p>
+    </section>
+    {% endfor %}
+        
+</body>
+</html>
